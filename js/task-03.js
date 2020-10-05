@@ -34,8 +34,14 @@ const galleryEl = document.querySelector('ul#gallery');
 
 const imgList = images.map(slide => {
     const addLiEl = document.createElement('li');
-    addLiEl.insertAdjacentHTML('beforeend', `<img src="${slide.url}" alt="${slide.alt}">`);
+    const addImgEl = document.createElement('img');
+    addImgEl.src = slide.url;
+    addImgEl.alt = slide.alt;
+    addLiEl.appendChild(addImgEl);
+    // addLiEl.insertAdjacentHTML('beforeend', `<img src="${slide.url}" alt="${slide.alt}">`);
+    // console.log(addLiEl);
     return addLiEl;
   });
+  
   galleryEl.append(...imgList);
 

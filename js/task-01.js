@@ -31,17 +31,17 @@ console.log(`
 
 const liEl = selectByIdOfEl.querySelectorAll('li.item');
 
-[].forEach.call(liEl, liNodeEl => {
+liEl.forEach(element => {
 
-    console.log(`
-      Категорія: ${liNodeEl.querySelector('h2').textContent}.
-    `);
+  console.log(`
+    Категорія: ${element.querySelector('h2').textContent}.
+  `);
 
-    console.log(`
-      Кількість: ${liNodeEl.querySelector('ul').children.length}.
-    `);
-    
-  });
+  console.log(`
+    Кількість: ${element.querySelector('ul').children.length}.
+  `);
+  
+});
 
 // ver.2
 
